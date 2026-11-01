@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#080c09">
+<meta name="description" content="EL BANGOU APPS : découvrez et téléchargez nos applications Android.">
+<title>EL BANGOU APPS — Centre officiel</title>
+<style>
+:root{
+ --bg:#080c09;--panel:#111813;--green:#16d887;
+ --white:#f5fff8;--muted:#98a89d;--line:#24342a;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--white);
+ font-family:Arial,sans-serif}
+header{
+ position:sticky;top:0;z-index:10;background:#080c09ee;
+ border-bottom:1px solid var(--line);
+ padding:15px 5%;display:flex;align-items:center;
+ justify-content:space-between;gap:12px
+}
+.brand{display:flex;align-items:center;gap:10px}
+.logo{
+ width:43px;height:43px;border-radius:11px;
+ background:var(--green);color:#06140c;
+ display:grid;place-items:center;font-weight:900;font-size:19px
+}
+.brand strong{font-size:16px;letter-spacing:.5px}
+.brand small{display:block;color:var(--green);font-size:9px;margin-top:4px}
+nav{display:flex;gap:17px}
+nav a{color:#d6e5da;text-decoration:none;font-size:12px}
+.hero{
+ padding:65px 7% 50px;
+ background:radial-gradient(ellipse at 80% 10%,#16462c,transparent 65%)
+}
+.tag{color:var(--green);font-size:11px;letter-spacing:2px}
+h1{font-size:clamp(38px,8vw,66px);line-height:1.06;
+ letter-spacing:-2px;margin:20px 0}
+h1 span{color:var(--green)}
+.hero p{max-width:510px;color:var(--muted);line-height:1.8}
+.button{
+ display:inline-block;background:var(--green);color:#06140c;
+ text-decoration:none;padding:15px 21px;border-radius:9px;
+ font-size:13px;font-weight:bold;margin-top:15px
+}
+main{max-width:1100px;margin:auto;padding:35px 5%}
+.section-head{display:flex;justify-content:space-between;
+ align-items:end;gap:12px;flex-wrap:wrap}
+h2{font-size:25px;margin:0 0 9px}
+.sub{color:var(--muted);font-size:13px;line-height:1.7}
+.search{
+ width:100%;max-width:390px;background:var(--panel);
+ color:white;border:1px solid var(--line);
+ padding:15px;border-radius:10px;outline:none;
+ font-size:14px;margin-top:22px
+}
+.search:focus{border-color:var(--green)}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin:17px 0 25px}
+.filter{
+ border:1px solid var(--line);background:var(--panel);
+ color:#c7d5cb;border-radius:30px;padding:10px 15px;
+ font-size:12px;cursor:pointer
+}
+.filter.active{background:var(--green);color:#06140c;border-color:var(--green)}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+.card{
+ background:var(--panel);border:1px solid var(--line);
+ border-radius:14px;padding:16px;min-width:0
+}
+.app-icon{
+ width:53px;height:53px;border-radius:13px;
+ background:#193d29;border:1px solid #286344;
+ display:grid;place-items:center;color:var(--green);
+ font-size:17px;font-weight:900;letter-spacing:-1px
+}
+.card h3{font-size:15px;margin:17px 0 7px}
+.card p{font-size:12px;line-height:1.7;color:var(--muted);min-height:55px}
+.category{font-size:10px;color:var(--green);letter-spacing:1px}
+.status{font-size:10px;color:#d6c18a;margin:12px 0}
+.download{
+ display:block;text-align:center;padding:12px;
+ border-radius:8px;background:#26352b;color:#aab8ae;
+ font-size:11px;font-weight:bold;text-decoration:none
+}
+.download.ready{background:var(--green);color:#06140c}
+.empty{display:none;color:var(--muted);padding:25px;text-align:center}
+.about{
+ margin:35px 0;background:#111a14;border:1px solid var(--line);
+ border-radius:15px;padding:25px
+}
+footer{border-top:1px solid var(--line);padding:30px 6%;
+ color:var(--muted);font-size:12px;line-height:2}
+footer strong{color:var(--green)}
+@media(min-width:700px){
+ .grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .hero{padding-top:85px}
+}
+@media(max-width:390px){
+ nav{gap:9px}nav a{font-size:10px}
+ .grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<header>
+ <div class="brand">
+  <div class="logo">EB</div>
+  <div><strong>EL BANGOU APPS</strong>
+  <small>OFFICIAL APPLICATION CENTER</small></div>
+ </div>
+ <nav>
+  <a href="#apps">Applications</a>
+  <a href="#about">À propos</a>
+ </nav>
+</header>
+
+<div class="hero">
+ <div class="tag">TECHNOLOGIE • CRÉATIVITÉ • INNOVATION</div>
+ <h1>Le numérique<br>à portée de <span>main.</span></h1>
+ <p>
+ Bienvenue sur EL BANGOU APPS.
+ Retrouve ici nos applications, découvre leurs fonctionnalités
+ et accède à leurs téléchargements officiels.
+ </p>
+ <a class="button" href="#apps">EXPLORER LES APPLICATIONS</a>
+</div>
+
+<main id="apps">
+ <div class="section-head">
+  <div>
+   <h2>Nos applications</h2>
+   <div class="sub">Découvre notre collection de logiciels.</div>
+  </div>
+ </div>
+
+ <input id="search" class="search"
+ placeholder="Rechercher une application..."
+ aria-label="Rechercher une application">
+
+ <div class="filters">
+  <button class="filter active" data-cat="all">Tout</button>
+  <button class="filter" data-cat="education">Éducation</button>
+  <button class="filter" data-cat="business">Commerce</button>
+  <button class="filter" data-cat="creative">Créativité</button>
+  <button class="filter" data-cat="technology">Technologie</button>
+ </div>
+
+ <div class="grid" id="grid"></div>
+ <div class="empty" id="empty">Aucune application trouvée.</div>
+
+ <div class="about" id="about">
+  <div class="tag">À PROPOS</div>
+  <h2>EL BANGOU APPS</h2>
+  <p class="sub">
+   Une plateforme officielle pour retrouver nos applications
+   Android au même endroit. Chaque logiciel dispose de sa propre
+   présentation et de son lien de téléchargement.
+  </p>
+ </div>
+</main>
+
+<footer>
+ <strong>EL BANGOU APPS</strong><br>
+ Centre officiel de téléchargement.<br>
+ © 2026 EL BANGOU APPS. Tous droits réservés.
+</footer>
+
+<script>
+const apps=[
+ {name:"GUINÉE MARKET",code:"GM",cat:"business",
+ desc:"Plateforme de commerce pour acheter et vendre en Guinée."},
+];
+
+const grid=document.getElementById("grid");
+const search=document.getElementById("search");
+const empty=document.getElementById("empty");
+let category="all";
+
+function render(){
+ const q=search.value.toLowerCase().trim();
+ const filtered=apps.filter(a=>
+  (category==="all"||a.cat===category)&&
+  (a.name.toLowerCase().includes(q)||a.desc.toLowerCase().includes(q))
+ );
+ grid.innerHTML=filtered.map(a=>{
+  const file=a.code+".apk";
+  return `<article class="card">
+   <div class="app-icon">${a.code}</div>
+   <div class="category">${a.cat.toUpperCase()}</div>
+   <h3>${a.name}</h3>
+   <p>${a.desc}</p>
+   <div class="status">● Téléchargement en préparation</div>
+   <a class="download" href="javascript:void(0)">BIENTÔT DISPONIBLE</a>
+  </article>`;
+ }).join("");
+ empty.style.display=filtered.length?"none":"block";
+}
+
+document.querySelectorAll(".filter").forEach(btn=>{
+ btn.addEventListener("click",()=>{
+  document.querySelectorAll(".filter").forEach(b=>b.classList.remove("active"));
+  btn.classList.add("active");
+  category=btn.dataset.cat;
+  render();
+ });
+});
+search.addEventListener("input",render);
+render();
+</script>
+</body>
+</html>
